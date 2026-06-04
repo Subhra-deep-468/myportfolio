@@ -39,8 +39,50 @@ export const Hero = ({ data }) => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background elements */}
+      {/* Twinkling Stars Background */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Star layers */}
+        <div className="stars-container">
+          {[...Array(80)].map((_, i) => (
+            <div
+              key={`star-${i}`}
+              className="star"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                width: `${Math.random() * 3 + 1}px`,
+                height: `${Math.random() * 3 + 1}px`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${Math.random() * 3 + 2}s`,
+              }}
+            />
+          ))}
+          {[...Array(30)].map((_, i) => (
+            <div
+              key={`sparkle-${i}`}
+              className="sparkle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${Math.random() * 2 + 3}s`,
+              }}
+            />
+          ))}
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={`shooting-${i}`}
+              className="shooting-star"
+              style={{
+                left: `${Math.random() * 50}%`,
+                top: `${Math.random() * 50}%`,
+                animationDelay: `${Math.random() * 10 + i * 2}s`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Animated background gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
