@@ -1,6 +1,6 @@
 # Subhradeep Chakraborty - Interactive Portfolio Website
 
-A modern, animation-rich interactive portfolio website built with **React**, **Tailwind CSS**, and **Shadcn/UI**. Features a professional dark theme with dynamic animations, interactive skill visualization, filterable projects, and a beautiful contact form.
+A modern, animation-rich interactive portfolio website built with **React**, **Tailwind CSS**, and **Shadcn/UI**. Features a professional dark theme with dynamic animations, twinkling star background, interactive skill visualization, filterable projects, and a beautiful contact form.
 
 ## Live Demo
 
@@ -9,6 +9,7 @@ Visit the live portfolio: [https://interactive-canvas-29.preview.emergentagent.c
 ## Features
 
 ### Interactive Animations
+- **Twinkling stars background** with sparkles and shooting stars
 - Smooth typing effect for hero title
 - Fade-in, slide-up, slide-left, slide-right animations
 - Hover effects with scale and glow transformations
@@ -17,7 +18,7 @@ Visit the live portfolio: [https://interactive-canvas-29.preview.emergentagent.c
 - Smooth scroll behavior throughout the site
 
 ### Sections
-- **Hero**: Animated introduction with typing effect, social links, and CTAs
+- **Hero**: Animated introduction with typing effect, profile photo, social links, and CTAs
 - **About**: Personal description with animated stat cards
 - **Skills**: Interactive category tabs with animated progress bars (6 categories, 30+ skills)
 - **Projects**: Filterable project showcase by tech stack (8 projects)
@@ -28,7 +29,7 @@ Visit the live portfolio: [https://interactive-canvas-29.preview.emergentagent.c
 ### Special Features
 - **Dark/Light Mode Toggle**: Persistent theme preference saved to localStorage
 - **Downloadable Resume**: One-click resume download
-- **Project Filtering**: Filter projects by technology stack (React.js, Node.js, AI APIs, etc.)
+- **Project Filtering**: Filter projects by technology stack
 - **Interactive Skill Visualization**: Animated progress bars with category switching
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **Smooth Scrolling**: Navigation with smooth scroll to sections
@@ -37,7 +38,6 @@ Visit the live portfolio: [https://interactive-canvas-29.preview.emergentagent.c
 
 ## Tech Stack
 
-### Frontend
 - **React 19.0.0** - Modern UI library
 - **React Router DOM 7.5.1** - Client-side routing
 - **Tailwind CSS 3.4.17** - Utility-first styling
@@ -45,27 +45,21 @@ Visit the live portfolio: [https://interactive-canvas-29.preview.emergentagent.c
 - **Lucide React** - Beautiful icon set
 - **Sonner** - Toast notifications
 
-### Backend (Ready for Integration)
-- **FastAPI** - Modern Python web framework
-- **MongoDB** - NoSQL database
-- **Motor** - Async MongoDB driver
+**Note**: This is a **frontend-only** application. No backend or database required! All data is stored in `/src/mock.js`.
 
 ## Project Structure
 
 ```
-/app/
-├── backend/
-│   ├── server.py              # FastAPI backend (ready for contact form API)
-│   ├── requirements.txt       # Python dependencies
-│   └── .env                   # Environment variables
+/
 ├── frontend/
 │   ├── public/
-│   │   └── resume.pdf         # Downloadable resume
+│   │   ├── resume.pdf         # Downloadable resume
+│   │   └── profile.jpg        # Profile photo
 │   ├── src/
-│   │   ├── mock.js            # Portfolio data (currently mocked)
+│   │   ├── mock.js            # Portfolio data (all content here)
 │   │   ├── App.js             # Main app component
 │   │   ├── App.css            # Custom styles
-│   │   ├── index.css          # Tailwind + animations
+│   │   ├── index.css          # Tailwind + animations (incl. stars)
 │   │   ├── components/
 │   │   │   ├── ThemeProvider.jsx
 │   │   │   ├── Portfolio/
@@ -80,8 +74,8 @@ Visit the live portfolio: [https://interactive-canvas-29.preview.emergentagent.c
 │   │   │   └── ui/            # Shadcn UI components
 │   │   └── pages/
 │   │       └── Portfolio.jsx  # Main portfolio page
-│   ├── package.json           # Node dependencies
-│   └── .env                   # Frontend environment variables
+│   ├── package.json           # Dependencies
+│   └── .env                   # Environment variables
 └── README.md
 ```
 
@@ -89,112 +83,39 @@ Visit the live portfolio: [https://interactive-canvas-29.preview.emergentagent.c
 
 ### Prerequisites
 
-Make sure you have the following installed on your system:
-
 - **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
 - **Yarn** (package manager) - Install with: `npm install -g yarn`
-- **Python** (v3.9 or higher) - [Download](https://python.org/)
-- **MongoDB** (optional, for backend) - [Download](https://www.mongodb.com/try/download/community)
 - **Git** - [Download](https://git-scm.com/)
 
 ### Step 1: Clone the Repository
 
 ```bash
 git clone <your-repository-url>
-cd portfolio
+cd <repo-name>
 ```
 
-### Step 2: Frontend Setup
-
-Navigate to the frontend directory and install dependencies:
+### Step 2: Install Dependencies
 
 ```bash
 cd frontend
 yarn install
 ```
 
-#### Configure Environment Variables
-
-Create a `.env` file in the `frontend` directory:
-
-```env
-REACT_APP_BACKEND_URL=http://localhost:8001
-WDS_SOCKET_PORT=3000
-```
-
-#### Run the Frontend
+### Step 3: Run the Development Server
 
 ```bash
 yarn start
 ```
 
-The frontend will be available at: **http://localhost:3000**
+The portfolio will be available at: **http://localhost:3000**
 
-### Step 3: Backend Setup (Optional - for contact form & data)
-
-Open a new terminal and navigate to the backend directory:
-
-```bash
-cd backend
-```
-
-#### Create Virtual Environment
-
-```bash
-python -m venv venv
-
-# Activate virtual environment
-# On macOS/Linux:
-source venv/bin/activate
-
-# On Windows:
-venv\Scripts\activate
-```
-
-#### Install Python Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-#### Configure Backend Environment Variables
-
-Create a `.env` file in the `backend` directory:
-
-```env
-MONGO_URL=mongodb://localhost:27017
-DB_NAME=portfolio_db
-CORS_ORIGINS=http://localhost:3000
-```
-
-#### Start MongoDB
-
-```bash
-# macOS (using Homebrew)
-brew services start mongodb-community
-
-# Linux
-sudo systemctl start mongod
-
-# Windows
-net start MongoDB
-```
-
-#### Run the Backend
-
-```bash
-uvicorn server:app --reload --host 0.0.0.0 --port 8001
-```
-
-The backend will be available at: **http://localhost:8001**
-
-API documentation will be at: **http://localhost:8001/docs**
+That's it! No backend setup needed.
 
 ## Customization Guide
 
 ### Update Portfolio Data
 
-All portfolio data is currently stored in `/frontend/src/mock.js`. Update the following sections:
+All portfolio data is stored in `/frontend/src/mock.js`. Update the following sections:
 
 ```javascript
 export const portfolioData = {
@@ -208,7 +129,6 @@ export const portfolioData = {
   projects: [...],   // Your projects
   experience: [...], // Your experience
   education: [...],  // Your education
-  // ... other sections
 };
 ```
 
@@ -216,16 +136,15 @@ export const portfolioData = {
 
 Replace `/frontend/public/resume.pdf` with your own resume file.
 
-### Update Profile Image
+### Replace Profile Photo
 
-Update the `avatar` field in `mock.js` with your image URL, or place your image in `/frontend/public/` and reference it as `/your-image.jpg`.
+Replace `/frontend/public/profile.jpg` with your own photo.
 
 ### Customize Colors
 
-The portfolio uses a cyan-to-blue gradient theme. To change colors, update:
-
-1. **Gradient classes** in component files (search for `from-cyan-` and `to-blue-`)
-2. **CSS variables** in `/frontend/src/index.css` (for theme colors)
+The portfolio uses a cyan-to-blue gradient theme. To change colors:
+1. Update **gradient classes** in component files (search for `from-cyan-` and `to-blue-`)
+2. Update **CSS variables** in `/frontend/src/index.css`
 
 ### Add More Projects
 
@@ -245,8 +164,6 @@ Edit `/frontend/src/mock.js` and add new project objects to the `projects` array
 
 ## Building for Production
 
-### Frontend Production Build
-
 ```bash
 cd frontend
 yarn build
@@ -254,13 +171,12 @@ yarn build
 
 The optimized production build will be in the `frontend/build/` directory.
 
-### Deploy to Vercel
+## Deployment
+
+### Deploy to Vercel (Recommended)
 
 ```bash
-# Install Vercel CLI
 npm install -g vercel
-
-# Deploy
 cd frontend
 vercel
 ```
@@ -268,30 +184,32 @@ vercel
 ### Deploy to Netlify
 
 ```bash
-# Install Netlify CLI
 npm install -g netlify-cli
-
-# Deploy
 cd frontend
+yarn build
 netlify deploy --prod --dir=build
 ```
 
-## Available Scripts
+### Deploy to GitHub Pages
 
-In the `frontend` directory:
+1. Install gh-pages: `yarn add -D gh-pages`
+2. Add to `package.json`:
+   ```json
+   "homepage": "https://yourusername.github.io/repo-name",
+   "scripts": {
+     "predeploy": "yarn build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
+3. Run: `yarn deploy`
+
+## Available Scripts
 
 - `yarn start` - Runs the app in development mode
 - `yarn build` - Builds the app for production
 - `yarn test` - Launches the test runner
 
-In the `backend` directory:
-
-- `uvicorn server:app --reload` - Runs the backend in development mode
-- `python -m pytest` - Runs backend tests (if available)
-
 ## Troubleshooting
-
-### Frontend Issues
 
 **Port 3000 already in use:**
 ```bash
@@ -310,20 +228,6 @@ rm -rf node_modules yarn.lock
 yarn install
 ```
 
-### Backend Issues
-
-**Port 8001 already in use:**
-```bash
-# Find and kill the process
-lsof -i :8001
-kill -9 <PID>
-```
-
-**MongoDB connection issues:**
-- Ensure MongoDB is running: `sudo systemctl status mongod`
-- Check connection string in `.env` file
-- Verify MongoDB port (default: 27017)
-
 ## Contact
 
 - **Email**: subhradeepchakraborty738@gmail.com
@@ -337,10 +241,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- Design inspired by modern portfolio trends
 - Icons by [Lucide React](https://lucide.dev/)
 - UI components by [Shadcn/UI](https://ui.shadcn.com/)
-- Built with love using React and Tailwind CSS
+- Built with React and Tailwind CSS
 
 ---
 
