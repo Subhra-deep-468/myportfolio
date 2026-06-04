@@ -14,9 +14,10 @@ export const Experience = ({ data }) => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Work <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Experience</span>
+              Internship <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Experience</span>
             </h2>
             <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+            <p className="mt-4 text-muted-foreground">Building skills through hands-on learning</p>
           </div>
 
           {/* Timeline */}

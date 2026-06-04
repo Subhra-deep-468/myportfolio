@@ -1,8 +1,8 @@
 export const portfolioData = {
   personalInfo: {
     name: "Subhradeep Chakraborty",
-    title: "Full Stack Developer & AI Enthusiast",
-    tagline: "Computer Science Engineering undergraduate specializing in Full Stack Development, Software Engineering, and AI Applications",
+    title: "Aspiring Full Stack Developer & AI Enthusiast",
+    tagline: "Computer Science Engineering undergraduate (Fresher) specializing in Full Stack Development, Software Engineering, and AI Applications. Open to opportunities!",
     email: "subhradeepchakraborty738@gmail.com",
     phone: "7679636849",
     location: "Kolkata, West Bengal",
@@ -13,12 +13,12 @@ export const portfolioData = {
   },
 
   about: {
-    description: "Passionate Computer Science undergraduate with hands-on experience in building scalable full-stack applications and AI-powered solutions. I thrive on solving complex problems and creating innovative digital experiences that make a real impact.",
+    description: "Passionate Computer Science undergraduate (Fresher) with hands-on internship experience and a strong drive to build scalable full-stack applications and AI-powered solutions. I love solving complex problems and creating innovative digital experiences. Actively seeking entry-level opportunities to contribute and grow.",
     highlights: [
       "Published NPM package for React components",
-      "Built 5+ AI-powered applications",
-      "25% performance improvement in production apps",
-      "Active contributor to open-source projects"
+      "Built 5+ AI-powered applications during internship & projects",
+      "25% performance improvement achieved during internship",
+      "Active learner & open-source contributor"
     ]
   },
 
@@ -117,7 +117,7 @@ export const portfolioData = {
     {
       id: 3,
       title: "Full Stack E-Commerce Platform",
-      description: "Developed a comprehensive e-commerce solution with advanced features including product management, cart functionality, secure payment processing, and admin dashboard.",
+      description: "Developed a comprehensive e-commerce solution with advanced features including product management, cart functionality, secure payment processing, and admin dashboard with analytics.",
       technologies: ["React.js", "Node.js", "MongoDB", "Stripe", "AWS S3"],
       github: "https://github.com/Subhra-deep-468",
       features: [
@@ -131,8 +131,8 @@ export const portfolioData = {
     {
       id: 4,
       title: "Task Management Application",
-      description: "Built a collaborative task management tool with real-time updates, team collaboration features, and advanced filtering capabilities.",
-      technologies: ["React.js", "FastAPI", "PostgreSQL", "WebSocket"],
+      description: "Built a collaborative task management tool with real-time updates, team collaboration features, and advanced filtering capabilities for productivity teams.",
+      technologies: ["React.js", "FastAPI", "MongoDB", "WebSocket"],
       github: "https://github.com/Subhra-deep-468",
       features: [
         "Real-time collaboration",
@@ -141,6 +141,62 @@ export const portfolioData = {
         "Progress tracking"
       ],
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop"
+    },
+    {
+      id: 5,
+      title: "AI Chatbot with RAG System",
+      description: "Developed an intelligent chatbot using Retrieval Augmented Generation (RAG) with vector databases. Implemented context-aware conversations with document understanding capabilities.",
+      technologies: ["Python", "LangChain", "OpenAI API", "Vector Databases", "FastAPI", "React.js"],
+      github: "https://github.com/Subhra-deep-468",
+      features: [
+        "Document understanding & QA",
+        "Vector-based semantic search",
+        "Multi-turn conversations",
+        "Custom knowledge base integration"
+      ],
+      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=500&fit=crop"
+    },
+    {
+      id: 6,
+      title: "Real-time Weather Dashboard",
+      description: "Interactive weather dashboard with real-time data visualization, location-based forecasts, and beautiful animated UI. Integrated multiple weather APIs for accurate data.",
+      technologies: ["React.js", "Tailwind CSS", "Weather API", "Chart.js"],
+      github: "https://github.com/Subhra-deep-468",
+      features: [
+        "Real-time weather data",
+        "Interactive charts & graphs",
+        "Geolocation support",
+        "7-day forecast view"
+      ],
+      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=500&fit=crop"
+    },
+    {
+      id: 7,
+      title: "Blog Platform with Markdown",
+      description: "Full-stack blog platform with markdown support, user authentication, comment system, and SEO optimization. Built for content creators and developers.",
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
+      github: "https://github.com/Subhra-deep-468",
+      features: [
+        "Markdown editor with preview",
+        "User authentication & profiles",
+        "Comment & reaction system",
+        "SEO optimization"
+      ],
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop"
+    },
+    {
+      id: 8,
+      title: "Personal Finance Tracker",
+      description: "A comprehensive finance tracking application with expense categorization, budget planning, and insightful visualizations to help users manage their finances better.",
+      technologies: ["React.js", "Node.js", "MongoDB", "Chart.js", "JWT"],
+      github: "https://github.com/Subhra-deep-468",
+      features: [
+        "Expense tracking & categorization",
+        "Budget planning tools",
+        "Visual analytics & reports",
+        "Multi-currency support"
+      ],
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop"
     }
   ],
 
@@ -149,8 +205,9 @@ export const portfolioData = {
       id: 1,
       role: "Software Engineer Intern",
       company: "Euphoria GenX",
-      duration: "2024 - Present",
+      duration: "2024 - 2025 (Internship)",
       location: "Remote",
+      type: "Internship",
       responsibilities: [
         "Developed and optimized 5+ full-stack features using React.js, Node.js, and REST APIs",
         "Improved application performance and scalability by 25%",
