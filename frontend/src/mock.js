@@ -9,7 +9,7 @@ export const portfolioData = {
     github: "https://github.com/Subhra-deep-468",
     linkedin: "https://linkedin.com/in/subhradeep-chakraborty-7a6a18394",
     resumeUrl: "/resume.pdf",
-    avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop"
+    avatar: "/profile.jpg"
   },
 
   about: {
