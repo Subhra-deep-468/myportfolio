@@ -267,11 +267,30 @@ export const portfolioData = {
     }
   ],
 
+  softSkills: [
+    { name: "Problem Solving", icon: "Lightbulb", description: "Analytical approach to complex challenges" },
+    { name: "Team Collaboration", icon: "Users", description: "Working effectively in cross-functional teams" },
+    { name: "Effective Communication", icon: "MessageSquare", description: "Clear technical & non-technical communication" },
+    { name: "Analytical Thinking", icon: "Brain", description: "Data-driven decision making" },
+    { name: "Adaptability", icon: "Zap", description: "Quick to learn new technologies & frameworks" },
+    { name: "Continuous Learning", icon: "BookOpen", description: "Always exploring new tech & best practices" },
+    { name: "Time Management", icon: "Clock", description: "Efficient task prioritization & delivery" },
+    { name: "Leadership", icon: "Target", description: "Leading projects & mentoring peers" },
+    { name: "Critical Thinking", icon: "Search", description: "Evaluating solutions from multiple angles" },
+    { name: "Creativity", icon: "Sparkles", description: "Innovative approach to building solutions" }
+  ],
+
+  languages: [
+    { name: "English", level: "Professional", proficiency: 90 },
+    { name: "Hindi", level: "Native", proficiency: 100 }
+  ],
+
   achievements: [
     "Published a reusable React component library as an NPM package",
     "Enhanced 4+ AI-powered and full-stack applications using Generative AI and cloud tech",
     "Engaged in hackathons and collaborative software development",
     "Coordinated and managed college events (technical & cultural)",
-    "Volunteered in college events and academic activities"
+    "Volunteered in college events and academic activities",
+    "Improved application performance by 25% during internship at Euphoria GenX"
   ]
 };
