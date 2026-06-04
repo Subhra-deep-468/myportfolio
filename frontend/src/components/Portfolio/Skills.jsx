@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '../ui/card';
 import { Progress } from '../ui/progress';
+import { AnimatedHeading } from './AnimatedHeading';
 
 export const Skills = ({ data }) => {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -32,13 +33,15 @@ export const Skills = ({ data }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Technical <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Skills</span>
-            </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
-            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive toolkit for building modern, scalable applications
-            </p>
+            <AnimatedHeading>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+                Technical <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Skills</span>
+              </h2>
+              <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+              <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+                A comprehensive toolkit for building modern, scalable applications
+              </p>
+            </AnimatedHeading>
           </div>
 
           {/* Category Tabs */}

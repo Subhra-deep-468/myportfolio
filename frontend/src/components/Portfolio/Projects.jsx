@@ -3,6 +3,7 @@ import { Card } from '../ui/card';
 import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import { Github, ExternalLink } from 'lucide-react';
+import { AnimatedHeading } from './AnimatedHeading';
 
 export const Projects = ({ data }) => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -22,13 +23,15 @@ export const Projects = ({ data }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Featured <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Projects</span>
-            </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
-            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my work in full-stack development and AI integration
-            </p>
+            <AnimatedHeading>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+                Featured <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Projects</span>
+              </h2>
+              <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+              <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+                A showcase of my work in full-stack development and AI integration
+              </p>
+            </AnimatedHeading>
           </div>
 
           {/* Filter Buttons */}

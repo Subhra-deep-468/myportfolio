@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '../ui/card';
 import { Lightbulb, Users, MessageSquare, Brain, Zap, BookOpen, Clock, Target, Search, Sparkles, Languages as LanguagesIcon } from 'lucide-react';
+import { AnimatedHeading } from './AnimatedHeading';
 
 const iconMap = {
   Lightbulb,
@@ -25,13 +26,15 @@ export const SoftSkills = ({ data }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Soft <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Skills</span>
-            </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
-            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Beyond code — the human skills that make me a complete full stack engineer
-            </p>
+            <AnimatedHeading>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+                Soft <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Skills</span>
+              </h2>
+              <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+              <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+                Beyond code — the human skills that make me a complete full stack engineer
+              </p>
+            </AnimatedHeading>
           </div>
 
           {/* Soft Skills Grid */}

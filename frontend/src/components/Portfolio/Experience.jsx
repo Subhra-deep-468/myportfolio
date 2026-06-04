@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { AnimatedHeading } from './AnimatedHeading';
 
 export const Experience = ({ data }) => {
   return (
@@ -13,17 +14,19 @@ export const Experience = ({ data }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Internship <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Experience</span>
-            </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
-            <p className="mt-4 text-muted-foreground">Building skills through hands-on learning</p>
+            <AnimatedHeading>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+                Internship <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Experience</span>
+              </h2>
+              <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+              <p className="mt-4 text-muted-foreground">Building skills through hands-on learning</p>
+            </AnimatedHeading>
           </div>
 
           {/* Timeline */}
           <div className="relative">
-            {/* Vertical Line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 via-blue-500 to-amber-500"></div>
+            {/* Animated Vertical Line */}
+            <div className="timeline-line absolute left-8 md:left-1/2 top-0 bottom-0 transform md:-translate-x-1/2"></div>
 
             {data.experience.map((exp, index) => (
               <div

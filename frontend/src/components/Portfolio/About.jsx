@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { Card } from '../ui/card';
+import { AnimatedHeading } from './AnimatedHeading';
 
 export const About = ({ data }) => {
   return (
@@ -8,10 +9,12 @@ export const About = ({ data }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              About <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Me</span>
-            </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+            <AnimatedHeading>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+                About <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Me</span>
+              </h2>
+              <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+            </AnimatedHeading>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
