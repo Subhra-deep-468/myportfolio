@@ -173,11 +173,11 @@ The optimized production build will be in the `frontend/build/` directory.
 
 ## Deployment
 
-### Deploy to Cloudflare Pages (Recommended)
+### Deploy to Render (Recommended)
 
 #### Prerequisites
-- A [Cloudflare account](https://dash.cloudflare.com/sign-up) (free)
-- Your project pushed to a GitHub or GitLab repository
+- A [Render account](https://render.com) (free)
+- Your project pushed to a GitHub repository
 
 #### Step 1: Push to GitHub
 
@@ -189,45 +189,44 @@ git remote add origin https://github.com/your-username/your-repo-name.git
 git push -u origin main
 ```
 
-#### Step 2: Connect to Cloudflare Pages
+#### Step 2: Create a New Static Site on Render
 
-1. Go to [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages**
-2. Click **Connect to Git** and authorize Cloudflare to access your GitHub account
-3. Select your repository and click **Begin setup**
+1. Go to [dashboard.render.com](https://dashboard.render.com) → **New** → **Static Site**
+2. Click **Connect a repository** and authorize Render to access your GitHub account
+3. Select your repository
 
 #### Step 3: Configure Build Settings
 
 | Setting | Value |
 |---|---|
-| **Framework preset** | Create React App |
-| **Root directory** | `frontend` |
-| **Build command** | `yarn build` |
-| **Build output directory** | `build` |
+| **Name** | `subhradeep-portfolio` *(or any name)* |
+| **Root Directory** | `frontend` |
+| **Build Command** | `yarn build` |
+| **Publish Directory** | `build` |
 
 #### Step 4: Add Environment Variables
 
-In the same setup screen, scroll to **Environment variables** and add:
+Scroll to **Environment Variables** on the same page and add:
 
-| Variable | Value |
+| Key | Value |
 |---|---|
-| `REACT_APP_WEB3FORMS_ACCESS_KEY` | *(your Web3Forms access key from the client)* |
+| `REACT_APP_WEB3FORMS_ACCESS_KEY` | *(your Web3Forms access key)* |
 
-> **Important:** Cloudflare Pages requires environment variables to be added here — the `.env` file is not used during cloud builds. Any variable starting with `REACT_APP_` is bundled into the frontend at build time.
+> **Important:** The `.env` file is not used during cloud builds. Environment variables must be added here — they are bundled into the app at build time.
 
 #### Step 5: Deploy
 
-Click **Save and Deploy**. Cloudflare will build and deploy the site. In ~2 minutes you'll get a URL like:
+Click **Create Static Site**. Render will build and deploy the site in ~2 minutes. You'll get a URL like:
 
 ```
-https://your-repo-name.pages.dev
+https://subhradeep-portfolio.onrender.com
 ```
 
 #### Step 6: Custom Domain (Optional)
 
-1. In Cloudflare Pages → your project → **Custom domains**
-2. Click **Set up a custom domain** and enter your domain
-3. If the domain is already on Cloudflare DNS, it sets up automatically
-4. If not, add a CNAME record pointing to `your-repo-name.pages.dev`
+1. In Render → your site → **Settings** → **Custom Domains**
+2. Click **Add Custom Domain** and enter your domain
+3. Add the CNAME record shown by Render to your domain's DNS settings
 
 #### Updating the Site
 
@@ -235,28 +234,9 @@ Every `git push` to `main` triggers an automatic redeploy. No manual steps neede
 
 #### Managing Environment Variables After Deployment
 
-1. Go to Cloudflare Pages → your project → **Settings** → **Environment variables**
-2. Add or edit variables under **Production**
-3. Trigger a new deployment for changes to take effect: **Deployments** → **Retry deployment**
-
----
-
-### Deploy to Vercel (Alternative)
-
-```bash
-npm install -g vercel
-cd frontend
-vercel
-```
-
-### Deploy to Netlify (Alternative)
-
-```bash
-npm install -g netlify-cli
-cd frontend
-yarn build
-netlify deploy --prod --dir=build
-```
+1. Go to Render → your site → **Environment**
+2. Add or update variables and click **Save Changes**
+3. Render will automatically trigger a new deployment
 
 ## Available Scripts
 

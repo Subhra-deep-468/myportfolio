@@ -3,7 +3,7 @@ export const portfolioData = {
     name: "Subhradeep Chakraborty",
     title: "Aspiring Full Stack Developer & AI Enthusiast",
     tagline: "Computer Science Engineering undergraduate (Fresher) specializing in Full Stack Development, Software Engineering, and AI Applications. Open to opportunities!",
-    email: "amit.r138634@gmail.com",
+    email: "subhradeepchakraborty738@gmail.com",
     phone: "7679636849",
     location: "Kolkata, West Bengal",
     github: "https://github.com/Subhra-deep-468",
@@ -262,9 +262,37 @@ export const portfolioData = {
       id: 2,
       name: "Generative AI",
       issuer: "Industry Certification",
-      description: "Certified in AI tools, prompt engineering, and LLM applications",
+      description: "Certified in LLMs, prompt engineering, and building production-ready AI applications",
       date: "2024"
-    }
+    },
+    {
+      id: 3,
+      name: "Full Stack Web Development",
+      issuer: "Industry Certification",
+      description: "Certified in React.js, Node.js, REST APIs, and MongoDB for building scalable full-stack applications",
+      date: "2024"
+    },
+    {
+      id: 4,
+      name: "Vibe Coding",
+      issuer: "Industry Certification",
+      description: "Certified in AI-assisted development workflows using modern tools to accelerate software delivery",
+      date: "2024"
+    },
+    // {
+    //   id: 5,
+    //   name: "Programming in Python with AI",
+    //   issuer: "Industry Certification",
+    //   description: "Certified in Python programming with AI integration, automation, and API consumption",
+    //   date: "2024"
+    // },
+    // {
+    //   id: 6,
+    //   name: "React with AI",
+    //   issuer: "Industry Certification",
+    //   description: "Certified in building AI-enhanced React applications with LLM API integration and dynamic UI generation",
+    //   date: "2024"
+    // }
   ],
 
   softSkills: [
