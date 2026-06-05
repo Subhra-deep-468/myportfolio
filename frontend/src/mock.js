@@ -48,7 +48,7 @@ export const portfolioData = {
       items: [
         { name: "Node.js", level: 90 },
         { name: "Express.js", level: 90 },
-        { name: "FastAPI", level: 80 },
+        { name: "Next.js", level: 80 },
         { name: "REST APIs", level: 90 },
         { name: "Authentication", level: 85 }
       ]
@@ -246,7 +246,7 @@ export const portfolioData = {
       institution: "Dabcha Nabakola High School",
       duration: "2020",
       cgpa: "88.71%",
-      highlights: ["WBSSE Board"]
+      highlights: ["WBBSE Board"]
     }
   ],
 
