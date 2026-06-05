@@ -137,16 +137,16 @@ export const portfolioData = {
     {
       id: 5,
       title: "Real Time Chat Application",
-      description: "Developed an intelligent chatbot using Retrieval Augmented Generation (RAG) with vector databases. Implemented context-aware conversations with document understanding capabilities.",
-      category: "AI + RAG",
-      technologies: ["Python", "LangChain", "OpenAI API", "Vector Databases", "FastAPI", "React.js"],
+      description: "Built a full-stack real-time chat platform using Socket.IO for WebSocket-based low-latency messaging. Features secure authentication, online/offline presence indicators, typing status, message timestamps, and persistent chat history.",
+      category: "Full Stack",
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
       github: "https://github.com/Subhra-deep-468/realtime_chatapplication1",
       demo: "https://realtime-chatapplication1frontend.onrender.com/login",
       features: [
-        "Document understanding & QA",
-        "Vector-based semantic search",
-        "Multi-turn conversations",
-        "Custom knowledge base integration"
+        "Instant messaging via WebSocket (Socket.IO)",
+        "Secure user authentication & authorization",
+        "Online/offline presence & typing indicators",
+        "Persistent chat history with message timestamps"
       ],
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=500&fit=crop"
     }
