@@ -93,21 +93,98 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 animate-slide-down">
-            <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
+          <>
+            {/* Backdrop */}
+            <div
+              className="md:hidden fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+
+            {/* Drawer Panel */}
+            <div className="md:hidden fixed inset-y-0 left-0 z-50 w-[85vw] max-w-sm flex flex-col overflow-hidden animate-slide-right"
+              style={{ background: 'linear-gradient(135deg, #0d1b3e 0%, #1a1040 50%, #0d2040 100%)' }}
+            >
+              {/* Stars inside drawer */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                {[...Array(50)].map((_, i) => (
+                  <div key={`ds-${i}`} className="star" style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    width: `${Math.random() * 2.5 + 1}px`,
+                    height: `${Math.random() * 2.5 + 1}px`,
+                    animationDelay: `${Math.random() * 3}s`,
+                    animationDuration: `${Math.random() * 3 + 2}s`,
+                  }} />
+                ))}
+                {[...Array(10)].map((_, i) => (
+                  <div key={`dsp-${i}`} className="sparkle" style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 5}s`,
+                    animationDuration: `${Math.random() * 2 + 3}s`,
+                  }} />
+                ))}
+                <div className="absolute top-1/3 left-1/2 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+              </div>
+
+              {/* Header */}
+              <div className="relative z-10 flex items-center justify-between px-6 py-5 border-b border-white/10"
+                style={{ background: 'linear-gradient(90deg, #1e3a8a55, #7c3aed44)' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                    SC
+                  </div>
+                  <div>
+                    <p className="font-bold text-white text-sm">Subhradeep Chakraborty</p>
+                    <p className="text-xs text-cyan-400">Full Stack Developer</p>
+                  </div>
+                </div>
                 <button
-                  key={item.name}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-left px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-300"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                 >
-                  {item.name}
+                  <X className="w-4 h-4 text-white" />
                 </button>
-              ))}
+              </div>
+
+              {/* Nav section */}
+              <div className="relative z-10 flex-1 px-4 py-6 overflow-y-auto">
+                <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4 px-2">Navigation</p>
+                <div className="flex flex-col gap-1">
+                  {navItems.map((item, i) => (
+                    <button
+                      key={item.name}
+                      onClick={() => handleNavClick(item.href)}
+                      className="text-left px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/10 font-medium text-base transition-all duration-200 animate-jump"
+                      style={{ animationDelay: `${i * 0.06}s` }}
+                    >
+                      {item.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Dark mode toggle at bottom */}
+              <div className="relative z-10 px-4 py-5 border-t border-white/10">
+                <button
+                  onClick={toggleTheme}
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-white/10 hover:bg-white/15 transition-all duration-200"
+                >
+                  <div className="flex items-center gap-3">
+                    {theme === 'dark' ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-blue-400" />}
+                    <span className="text-white font-medium text-sm">{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
+                  </div>
+                  <div className={`w-10 h-5 rounded-full transition-all duration-300 relative ${theme === 'dark' ? 'bg-cyan-500' : 'bg-white/20'}`}>
+                    <div className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-all duration-300 ${theme === 'dark' ? 'left-5' : 'left-0.5'}`} />
+                  </div>
+                </button>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
     </header>

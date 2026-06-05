@@ -136,7 +136,7 @@ export const portfolioData = {
     },
     {
       id: 5,
-      title: "AI Chatbot with RAG System",
+      title: "Real Time Chat Application",
       description: "Developed an intelligent chatbot using Retrieval Augmented Generation (RAG) with vector databases. Implemented context-aware conversations with document understanding capabilities.",
       category: "AI + RAG",
       technologies: ["Python", "LangChain", "OpenAI API", "Vector Databases", "FastAPI", "React.js"],
