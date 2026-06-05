@@ -90,8 +90,10 @@ export const portfolioData = {
       id: 1,
       title: "AI Powered React UI Library",
       description: "Architected and expanded a scalable AI-powered React component library and NPM package. Integrated AI APIs for dynamic UI generation from natural language prompts. Built a SaaS platform with authentication, RBAC, and payment integration.",
+      category: "AI + SaaS",
       technologies: ["React.js", "TypeScript", "Tailwind CSS", "AI APIs", "MongoDB", "Razorpay"],
-      github: "https://github.com/Subhra-deep-468",
+      github: "https://github.com/Subhra-deep-468/AI-Powered-ReactUI-Library",
+      demo: "https://reactuilibraryfrontend.onrender.com/",
       features: [
         "Dynamic UI generation from natural language",
         "Published NPM package",
@@ -104,8 +106,10 @@ export const portfolioData = {
       id: 2,
       title: "AI Voice Assistant for Websites",
       description: "Built and deployed an AI-powered voice assistant platform with Speech-to-Text, Text-to-Speech, and Gemini API integration for context-aware conversations. Developed scalable full-stack architecture with responsive UI.",
+      category: "AI Application",
       technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "STT", "TTS", "Gemini API"],
-      github: "https://github.com/Subhra-deep-468",
+      github: "https://github.com/Subhra-deep-468/AIvoice-assistant",
+      demo: "https://aivoice-assistant-1.onrender.com/login",
       features: [
         "Real-time voice interaction",
         "Context-aware AI responses",
@@ -115,25 +119,13 @@ export const portfolioData = {
       image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=500&fit=crop"
     },
     {
-      id: 3,
-      title: "Full Stack E-Commerce Platform",
-      description: "Developed a comprehensive e-commerce solution with advanced features including product management, cart functionality, secure payment processing, and admin dashboard with analytics.",
-      technologies: ["React.js", "Node.js", "MongoDB", "Stripe", "AWS S3"],
-      github: "https://github.com/Subhra-deep-468",
-      features: [
-        "Secure payment processing",
-        "Real-time inventory management",
-        "Admin analytics dashboard",
-        "Responsive design"
-      ],
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop"
-    },
-    {
       id: 4,
-      title: "Task Management Application",
-      description: "Built a collaborative task management tool with real-time updates, team collaboration features, and advanced filtering capabilities for productivity teams.",
-      technologies: ["React.js", "FastAPI", "MongoDB", "WebSocket"],
-      github: "https://github.com/Subhra-deep-468",
+      title: "Ai Interview Agent",
+      description: "Built a collaborative AI based Interview preparation  tool with real-time updates, team collaboration features, and advanced filtering capabilities for productivity teams.",
+      category: "Productivity Tool",
+      technologies: ["React.js", "Next.js", "MongoDB", "WebSocket"],
+      github: "https://github.com/Subhra-deep-468/ai_interviewagent",
+      demo: "https://ai-interviewagent6.onrender.com/",
       features: [
         "Real-time collaboration",
         "Advanced task filtering",
@@ -146,8 +138,10 @@ export const portfolioData = {
       id: 5,
       title: "AI Chatbot with RAG System",
       description: "Developed an intelligent chatbot using Retrieval Augmented Generation (RAG) with vector databases. Implemented context-aware conversations with document understanding capabilities.",
+      category: "AI + RAG",
       technologies: ["Python", "LangChain", "OpenAI API", "Vector Databases", "FastAPI", "React.js"],
-      github: "https://github.com/Subhra-deep-468",
+      github: "https://github.com/Subhra-deep-468/realtime_chatapplication1",
+      demo: "https://realtime-chatapplication1frontend.onrender.com/login",
       features: [
         "Document understanding & QA",
         "Vector-based semantic search",
@@ -155,48 +149,6 @@ export const portfolioData = {
         "Custom knowledge base integration"
       ],
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=500&fit=crop"
-    },
-    {
-      id: 6,
-      title: "Real-time Weather Dashboard",
-      description: "Interactive weather dashboard with real-time data visualization, location-based forecasts, and beautiful animated UI. Integrated multiple weather APIs for accurate data.",
-      technologies: ["React.js", "Tailwind CSS", "Weather API", "Chart.js"],
-      github: "https://github.com/Subhra-deep-468",
-      features: [
-        "Real-time weather data",
-        "Interactive charts & graphs",
-        "Geolocation support",
-        "7-day forecast view"
-      ],
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=500&fit=crop"
-    },
-    {
-      id: 7,
-      title: "Blog Platform with Markdown",
-      description: "Full-stack blog platform with markdown support, user authentication, comment system, and SEO optimization. Built for content creators and developers.",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
-      github: "https://github.com/Subhra-deep-468",
-      features: [
-        "Markdown editor with preview",
-        "User authentication & profiles",
-        "Comment & reaction system",
-        "SEO optimization"
-      ],
-      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop"
-    },
-    {
-      id: 8,
-      title: "Personal Finance Tracker",
-      description: "A comprehensive finance tracking application with expense categorization, budget planning, and insightful visualizations to help users manage their finances better.",
-      technologies: ["React.js", "Node.js", "MongoDB", "Chart.js", "JWT"],
-      github: "https://github.com/Subhra-deep-468",
-      features: [
-        "Expense tracking & categorization",
-        "Budget planning tools",
-        "Visual analytics & reports",
-        "Multi-currency support"
-      ],
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop"
     }
   ],
 
