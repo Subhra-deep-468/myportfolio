@@ -157,7 +157,7 @@ export const portfolioData = {
       id: 1,
       role: "Software Engineer Intern",
       company: "Euphoria GenX",
-      duration: "2024 - 2025 (Internship)",
+      duration: "2026 (Internship)",
       location: "Remote",
       type: "Internship",
       responsibilities: [
@@ -167,7 +167,7 @@ export const portfolioData = {
         "Contributed to backend development, database management, and code reviews",
         "Implemented debugging solutions and participated in Agile-based software delivery"
       ],
-      technologies: ["React.js", "Node.js", "REST APIs", "MongoDB", "Agile"]
+      technologies: ["React.js", "Node.js", "REST APIs", "MongoDB", "Agile", "AI", "Machine Learning","Rest Apis"]
     }
   ],
 
@@ -208,43 +208,29 @@ export const portfolioData = {
       name: "Cloud Computing with AWS",
       issuer: "AWS",
       description: "Completed AWS Cloud Computing Training covering EC2, S3, IAM, VPC",
-      date: "2024"
+      date: "2026"
     },
     {
       id: 2,
       name: "Generative AI",
       issuer: "Industry Certification",
       description: "Certified in LLMs, prompt engineering, and building production-ready AI applications",
-      date: "2024"
+      date: "2026"
     },
     {
       id: 3,
       name: "Full Stack Web Development",
       issuer: "Industry Certification",
       description: "Certified in React.js, Node.js, REST APIs, and MongoDB for building scalable full-stack applications",
-      date: "2024"
+      date: "2026"
     },
     {
       id: 4,
       name: "Vibe Coding",
       issuer: "Industry Certification",
       description: "Certified in AI-assisted development workflows using modern tools to accelerate software delivery",
-      date: "2024"
-    },
-    // {
-    //   id: 5,
-    //   name: "Programming in Python with AI",
-    //   issuer: "Industry Certification",
-    //   description: "Certified in Python programming with AI integration, automation, and API consumption",
-    //   date: "2024"
-    // },
-    // {
-    //   id: 6,
-    //   name: "React with AI",
-    //   issuer: "Industry Certification",
-    //   description: "Certified in building AI-enhanced React applications with LLM API integration and dynamic UI generation",
-    //   date: "2024"
-    // }
+      date: "2026"
+    }
   ],
 
   softSkills: [
