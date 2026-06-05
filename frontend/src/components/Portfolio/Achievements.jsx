@@ -1,10 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from '../ui/card';
-import { Award, Trophy, CheckCircle2, Calendar } from 'lucide-react';
+import { Award, Trophy, CheckCircle2, Calendar, Eye, X } from 'lucide-react';
 import { AnimatedHeading } from './AnimatedHeading';
 
+const CertificateModal = ({ cert, onClose }) => (
+  <div
+    className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+    onClick={onClose}
+  >
+    <div
+      className="relative max-w-3xl w-full bg-background rounded-2xl shadow-2xl overflow-hidden"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between px-6 py-4 border-b border-border">
+        <div>
+          <h3 className="font-bold text-lg">{cert.name}</h3>
+          <p className="text-sm text-cyan-500">{cert.issuer}</p>
+        </div>
+        <button
+          onClick={onClose}
+          className="p-2 rounded-full hover:bg-accent transition-colors"
+        >
+          <X className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Certificate image — protected from download */}
+      <div
+        className="relative select-none"
+        onContextMenu={(e) => e.preventDefault()}
+        onDragStart={(e) => e.preventDefault()}
+      >
+        <img
+          src={cert.certificate}
+          alt={cert.name}
+          className="w-full object-contain max-h-[70vh] pointer-events-none"
+          draggable={false}
+        />
+        {/* Transparent overlay blocks right-click save on the image */}
+        <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()} />
+      </div>
+    </div>
+  </div>
+);
+
 export const Achievements = ({ data }) => {
+  const [activeCert, setActiveCert] = useState(null);
+
+  React.useEffect(() => {
+    const handler = (e) => { if (e.key === 'Escape') setActiveCert(null); };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
+
   return (
+    <>
     <section id="achievements" className="py-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
@@ -61,7 +112,16 @@ export const Achievements = ({ data }) => {
                           </div>
                         </div>
                         <p className="text-sm text-cyan-500 font-medium mb-2">{cert.issuer}</p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{cert.description}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-3">{cert.description}</p>
+                        {cert.certificate && (
+                          <button
+                            onClick={() => setActiveCert(cert)}
+                            className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium border border-cyan-500/40 text-cyan-400 hover:bg-cyan-500/10 transition-all duration-200"
+                          >
+                            <Eye className="w-3.5 h-3.5" />
+                            View Certificate
+                          </button>
+                        )}
                       </div>
                     </div>
                   </Card>
@@ -101,17 +161,17 @@ export const Achievements = ({ data }) => {
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mt-6">
-                <div className="text-center p-4 rounded-lg bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
-                  <div className="text-2xl font-bold text-cyan-500 mb-1">6+</div>
-                  <div className="text-xs text-muted-foreground">Certifications</div>
+                <div className="text-center p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
+                  <div className="text-4xl font-bold text-cyan-500 mb-2">6+</div>
+                  <div className="text-sm font-medium text-muted-foreground">Certifications</div>
                 </div>
-                <div className="text-center p-4 rounded-lg bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
-                  <div className="text-2xl font-bold text-amber-500 mb-1">6+</div>
-                  <div className="text-xs text-muted-foreground">Achievements</div>
+                <div className="text-center p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
+                  <div className="text-4xl font-bold text-amber-500 mb-2">6+</div>
+                  <div className="text-sm font-medium text-muted-foreground">Achievements</div>
                 </div>
-                <div className="text-center p-4 rounded-lg bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
-                  <div className="text-2xl font-bold text-blue-500 mb-1">NPM</div>
-                  <div className="text-xs text-muted-foreground">Package Published</div>
+                <div className="text-center p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
+                  <div className="text-4xl font-bold text-blue-500 mb-2">NPM</div>
+                  <div className="text-sm font-medium text-muted-foreground">Package Published</div>
                 </div>
               </div>
             </div>
@@ -119,5 +179,7 @@ export const Achievements = ({ data }) => {
         </div>
       </div>
     </section>
+    {activeCert && <CertificateModal cert={activeCert} onClose={() => setActiveCert(null)} />}
+    </>
   );
 };

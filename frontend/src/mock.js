@@ -208,28 +208,32 @@ export const portfolioData = {
       name: "Cloud Computing with AWS",
       issuer: "AWS",
       description: "Completed AWS Cloud Computing Training covering EC2, S3, IAM, VPC",
-      date: "2026"
+      date: "2026",
+      certificate: "/certificates/aws-cloud.jpg"
     },
     {
       id: 2,
       name: "Generative AI",
       issuer: "Industry Certification",
       description: "Certified in LLMs, prompt engineering, and building production-ready AI applications",
-      date: "2026"
+      date: "2026",
+      certificate: "/certificates/generative-ai.jpg"
     },
     {
       id: 3,
       name: "Full Stack Web Development",
       issuer: "Industry Certification",
       description: "Certified in React.js, Node.js, REST APIs, and MongoDB for building scalable full-stack applications",
-      date: "2026"
+      date: "2026",
+      certificate: ""
     },
     {
       id: 4,
       name: "Vibe Coding",
       issuer: "Industry Certification",
       description: "Certified in AI-assisted development workflows using modern tools to accelerate software delivery",
-      date: "2026"
+      date: "2026",
+      certificate: "/certificates/vibe-coding.jpg"
     }
   ],
 
