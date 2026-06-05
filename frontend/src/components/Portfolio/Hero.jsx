@@ -79,7 +79,7 @@ export const Hero = ({ data }) => {
             </div>
 
             {/* Name */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight animate-jump" style={{ animationDelay: '0.1s' }}>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight animate-jump" style={{ animationDelay: '0.1s' }}>
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-amber-400 bg-clip-text text-transparent">
                 {data.personalInfo.name}
               </span>

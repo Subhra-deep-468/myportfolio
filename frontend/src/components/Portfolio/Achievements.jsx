@@ -160,18 +160,18 @@ export const Achievements = ({ data }) => {
               </Card>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-6">
-                <div className="text-center p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
-                  <div className="text-4xl font-bold text-cyan-500 mb-2">6+</div>
-                  <div className="text-sm font-medium text-muted-foreground">Certifications</div>
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-6">
+                <div className="text-center p-3 sm:p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
+                  <div className="text-2xl sm:text-4xl font-bold text-cyan-500 mb-1 sm:mb-2">6+</div>
+                  <div className="text-xs sm:text-sm font-medium text-muted-foreground">Certifications</div>
                 </div>
-                <div className="text-center p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
-                  <div className="text-4xl font-bold text-amber-500 mb-2">6+</div>
-                  <div className="text-sm font-medium text-muted-foreground">Achievements</div>
+                <div className="text-center p-3 sm:p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
+                  <div className="text-2xl sm:text-4xl font-bold text-amber-500 mb-1 sm:mb-2">6+</div>
+                  <div className="text-xs sm:text-sm font-medium text-muted-foreground">Achievements</div>
                 </div>
-                <div className="text-center p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
-                  <div className="text-4xl font-bold text-blue-500 mb-2">NPM</div>
-                  <div className="text-sm font-medium text-muted-foreground">Package Published</div>
+                <div className="text-center p-3 sm:p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
+                  <div className="text-2xl sm:text-4xl font-bold text-blue-500 mb-1 sm:mb-2">NPM</div>
+                  <div className="text-xs sm:text-sm font-medium text-muted-foreground">Package Published</div>
                 </div>
               </div>
             </div>

@@ -118,7 +118,7 @@ export const Contact = ({ data }) => {
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
-              <Card className="p-8 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500 animate-slide-right">
+              <Card className="p-4 sm:p-8 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500 animate-slide-right">
                 {isSuccess ? (
                   <div className="flex flex-col items-center justify-center py-12 space-y-4 animate-fade-in">
                     <div className="p-4 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 animate-bounce">

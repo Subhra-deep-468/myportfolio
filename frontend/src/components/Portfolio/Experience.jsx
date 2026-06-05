@@ -48,7 +48,7 @@ export const Experience = ({ data }) => {
                         <Briefcase className="w-6 h-6 text-cyan-500" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold group-hover:text-cyan-400 transition-colors">
+                        <h3 className="text-xl sm:text-2xl font-bold group-hover:text-cyan-400 transition-colors">
                           {exp.role}
                         </h3>
                         <p className="text-lg text-muted-foreground font-semibold">{exp.company}</p>

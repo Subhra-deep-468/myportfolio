@@ -50,7 +50,7 @@ export const Skills = ({ data }) => {
               <button
                 key={index}
                 onClick={() => setActiveCategory(index)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
+                className={`px-3 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
                   activeCategory === index
                     ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
                     : 'bg-accent text-muted-foreground hover:bg-accent/80'
@@ -62,7 +62,7 @@ export const Skills = ({ data }) => {
           </div>
 
           {/* Skills Display */}
-          <Card className="p-8 backdrop-blur-sm bg-card/50 border-2 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500">
+          <Card className="p-4 sm:p-8 backdrop-blur-sm bg-card/50 border-2 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500">
             <div className="space-y-6">
               {data.skills[activeCategory]?.items.map((skill, index) => (
                 <div

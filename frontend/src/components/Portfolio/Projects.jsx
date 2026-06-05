@@ -39,7 +39,7 @@ export const Projects = ({ data }) => {
                 key={filter}
                 variant={selectedFilter === filter ? 'default' : 'outline'}
                 onClick={() => setSelectedFilter(filter)}
-                className={`transition-all duration-300 transform hover:scale-105 ${
+                className={`text-xs sm:text-sm transition-all duration-300 transform hover:scale-105 ${
                   selectedFilter === filter
                     ? 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white shadow-lg shadow-cyan-500/25'
                     : 'hover:border-cyan-500 hover:text-cyan-500'

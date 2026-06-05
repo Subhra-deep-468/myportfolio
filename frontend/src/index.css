@@ -514,9 +514,9 @@ code {
   }
 }
 
-/* Smooth transitions for theme switching */
-* {
-  transition-property: background-color, border-color, color;
+/* Smooth transitions for theme switching — only colour properties to avoid jank */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
@@ -545,9 +545,14 @@ code {
   color: hsl(var(--foreground));
 }
 
-/* Smooth scroll */
+/* Smooth scroll + prevent horizontal overflow from animated background elements */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Remove default focus outline and add custom */

@@ -80,7 +80,7 @@ export const SoftSkills = ({ data }) => {
               {data.languages.map((language, index) => (
                 <Card
                   key={language.name}
-                  className="p-8 group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:scale-105 animate-slide-up"
+                  className="p-4 sm:p-8 group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:scale-105 animate-slide-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-center justify-between mb-4">
