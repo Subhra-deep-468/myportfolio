@@ -69,6 +69,33 @@ export const Projects = ({ data }) => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+
+                    {/* Hover icons */}
+                    <div
+                      className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-background/90 backdrop-blur-sm hover:bg-cyan-600 hover:text-white text-foreground transition-all duration-300 transform hover:scale-110 shadow-lg"
+                          title="Live Demo"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      )}
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-background/90 backdrop-blur-sm hover:bg-gray-700 hover:text-white text-foreground transition-all duration-300 transform hover:scale-110 shadow-lg"
+                        title="GitHub"
+                      >
+                        <Github className="w-5 h-5" />
+                      </a>
+                    </div>
                   </div>
 
                   {/* Project Info */}

@@ -102,7 +102,7 @@ export const Achievements = ({ data }) => {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="text-center p-4 rounded-lg bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
-                  <div className="text-2xl font-bold text-cyan-500 mb-1">2+</div>
+                  <div className="text-2xl font-bold text-cyan-500 mb-1">6+</div>
                   <div className="text-xs text-muted-foreground">Certifications</div>
                 </div>
                 <div className="text-center p-4 rounded-lg bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">

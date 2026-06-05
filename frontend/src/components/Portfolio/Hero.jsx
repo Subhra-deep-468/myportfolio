@@ -1,32 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Github, Linkedin, Mail, MapPin, Download } from 'lucide-react';
 import { Button } from '../ui/button';
 
 export const Hero = ({ data }) => {
-  const [displayText, setDisplayText] = useState('');
-  const [showCursor, setShowCursor] = useState(true);
-  const fullText = data.personalInfo.title;
-
-  useEffect(() => {
-    let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setDisplayText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, 100);
-
-    const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 500);
-
-    return () => {
-      clearInterval(typingInterval);
-      clearInterval(cursorInterval);
-    };
-  }, [fullText]);
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
@@ -102,23 +78,20 @@ export const Hero = ({ data }) => {
               </div>
             </div>
 
-            {/* Name with slide-up animation */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight animate-slide-up">
+            {/* Name */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight animate-jump" style={{ animationDelay: '0.1s' }}>
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-amber-400 bg-clip-text text-transparent">
                 {data.personalInfo.name}
               </span>
             </h1>
 
-            {/* Typing animation for title */}
-            <div className="h-16 flex items-center justify-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-muted-foreground">
-                {displayText}
-                <span className={`inline-block w-1 h-8 ml-1 bg-cyan-500 ${showCursor ? 'opacity-100' : 'opacity-0'}`}></span>
-              </h2>
-            </div>
+            {/* Title */}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-muted-foreground animate-jump" style={{ animationDelay: '0.3s' }}>
+              {data.personalInfo.title}
+            </h2>
 
             {/* Tagline */}
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-jump" style={{ animationDelay: '0.5s' }}>
               {data.personalInfo.tagline}
             </p>
 
