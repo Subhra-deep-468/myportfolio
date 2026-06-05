@@ -200,9 +200,9 @@ git push -u origin main
 | Setting | Value |
 |---|---|
 | **Name** | `subhradeep-portfolio` *(or any name)* |
-| **Root Directory** | `frontend` |
-| **Build Command** | `yarn build` |
-| **Publish Directory** | `build` |
+| **Root Directory** | *(leave blank)* |
+| **Build Command** | `cd frontend && yarn install && yarn build` |
+| **Publish Directory** | `frontend/build` |
 
 #### Step 4: Add Environment Variables
 
