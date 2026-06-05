@@ -4,7 +4,7 @@ A modern, animation-rich interactive portfolio website built with **React**, **T
 
 ## Live Demo
 
-Visit the live portfolio: [https://interactive-canvas-29.preview.emergentagent.com](https://interactive-canvas-29.preview.emergentagent.com)
+Visit the live portfolio: *(update this once deployed to Cloudflare Pages)*
 
 ## Features
 
@@ -173,7 +173,75 @@ The optimized production build will be in the `frontend/build/` directory.
 
 ## Deployment
 
-### Deploy to Vercel (Recommended)
+### Deploy to Cloudflare Pages (Recommended)
+
+#### Prerequisites
+- A [Cloudflare account](https://dash.cloudflare.com/sign-up) (free)
+- Your project pushed to a GitHub or GitLab repository
+
+#### Step 1: Push to GitHub
+
+```bash
+git init        # if not already a git repo
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/your-username/your-repo-name.git
+git push -u origin main
+```
+
+#### Step 2: Connect to Cloudflare Pages
+
+1. Go to [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages**
+2. Click **Connect to Git** and authorize Cloudflare to access your GitHub account
+3. Select your repository and click **Begin setup**
+
+#### Step 3: Configure Build Settings
+
+| Setting | Value |
+|---|---|
+| **Framework preset** | Create React App |
+| **Root directory** | `frontend` |
+| **Build command** | `yarn build` |
+| **Build output directory** | `build` |
+
+#### Step 4: Add Environment Variables
+
+In the same setup screen, scroll to **Environment variables** and add:
+
+| Variable | Value |
+|---|---|
+| `REACT_APP_WEB3FORMS_ACCESS_KEY` | *(your Web3Forms access key from the client)* |
+
+> **Important:** Cloudflare Pages requires environment variables to be added here — the `.env` file is not used during cloud builds. Any variable starting with `REACT_APP_` is bundled into the frontend at build time.
+
+#### Step 5: Deploy
+
+Click **Save and Deploy**. Cloudflare will build and deploy the site. In ~2 minutes you'll get a URL like:
+
+```
+https://your-repo-name.pages.dev
+```
+
+#### Step 6: Custom Domain (Optional)
+
+1. In Cloudflare Pages → your project → **Custom domains**
+2. Click **Set up a custom domain** and enter your domain
+3. If the domain is already on Cloudflare DNS, it sets up automatically
+4. If not, add a CNAME record pointing to `your-repo-name.pages.dev`
+
+#### Updating the Site
+
+Every `git push` to `main` triggers an automatic redeploy. No manual steps needed.
+
+#### Managing Environment Variables After Deployment
+
+1. Go to Cloudflare Pages → your project → **Settings** → **Environment variables**
+2. Add or edit variables under **Production**
+3. Trigger a new deployment for changes to take effect: **Deployments** → **Retry deployment**
+
+---
+
+### Deploy to Vercel (Alternative)
 
 ```bash
 npm install -g vercel
@@ -181,7 +249,7 @@ cd frontend
 vercel
 ```
 
-### Deploy to Netlify
+### Deploy to Netlify (Alternative)
 
 ```bash
 npm install -g netlify-cli
@@ -189,19 +257,6 @@ cd frontend
 yarn build
 netlify deploy --prod --dir=build
 ```
-
-### Deploy to GitHub Pages
-
-1. Install gh-pages: `yarn add -D gh-pages`
-2. Add to `package.json`:
-   ```json
-   "homepage": "https://yourusername.github.io/repo-name",
-   "scripts": {
-     "predeploy": "yarn build",
-     "deploy": "gh-pages -d build"
-   }
-   ```
-3. Run: `yarn deploy`
 
 ## Available Scripts
 

@@ -9,42 +9,50 @@ import { toast } from 'sonner';
 import { AnimatedHeading } from './AnimatedHeading';
 
 export const Contact = ({ data }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (mock)
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    toast.success('Message sent successfully! I\'ll get back to you soon.');
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({ name: '', email: '', message: '' });
-      setIsSuccess(false);
-    }, 3000);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: process.env.REACT_APP_WEB3FORMS_ACCESS_KEY,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `Portfolio Contact from ${formData.name}`,
+        }),
+      });
+      const result = await res.json();
+      if (result.success) {
+        setIsSuccess(true);
+        toast.success("Message sent! I'll get back to you soon.");
+        setTimeout(() => {
+          setFormData({ name: '', email: '', message: '' });
+          setIsSuccess(false);
+        }, 3000);
+      } else {
+        throw new Error(result.message);
+      }
+    } catch {
+      toast.error('Failed to send. Please email me directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background decorations */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
 
@@ -70,9 +78,9 @@ export const Contact = ({ data }) => {
                   <div className="p-3 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all">
                     <Mail className="w-6 h-6 text-cyan-500" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href={`mailto:${data.personalInfo.email}`} className="font-medium hover:text-cyan-400 transition-colors">
+                    <a href={`mailto:${data.personalInfo.email}`} className="font-medium hover:text-cyan-400 transition-colors break-all">
                       {data.personalInfo.email}
                     </a>
                   </div>

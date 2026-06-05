@@ -3,7 +3,7 @@ export const portfolioData = {
     name: "Subhradeep Chakraborty",
     title: "Aspiring Full Stack Developer & AI Enthusiast",
     tagline: "Computer Science Engineering undergraduate (Fresher) specializing in Full Stack Development, Software Engineering, and AI Applications. Open to opportunities!",
-    email: "subhradeepchakraborty738@gmail.com",
+    email: "amit.r138634@gmail.com",
     phone: "7679636849",
     location: "Kolkata, West Bengal",
     github: "https://github.com/Subhra-deep-468",
