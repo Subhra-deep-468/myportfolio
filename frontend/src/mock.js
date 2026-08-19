@@ -158,7 +158,6 @@ export const portfolioData = {
       role: "Software Engineer Intern",
       company: "Euphoria GenX",
       duration: "2026 (Internship)",
-      location: "Remote",
       type: "Internship",
       responsibilities: [
         "Developed and optimized 5+ full-stack features using React.js, Node.js, and REST APIs",
@@ -168,6 +167,20 @@ export const portfolioData = {
         "Implemented debugging solutions and participated in Agile-based software delivery"
       ],
       technologies: ["React.js", "Node.js", "REST APIs", "MongoDB", "Agile", "AI", "Machine Learning","Rest Apis"]
+    },
+    {
+      id: 2,
+      role: "Intern",
+      company: "Tata Steel Limited",
+      duration: "2026 (Internship)",
+      location: "India",
+      type: "Internship",
+      responsibilities: [
+        "Applied programming and debugging concepts to improve the functionality and reliability of web applications",
+        "Gained experience working in a professional organizational environment and understanding software development practices",
+        "Strengthened problem-solving and technical skills through practical development work"
+      ],
+      technologies: ["Professional Experience"]
     }
   ],
 
@@ -177,7 +190,7 @@ export const portfolioData = {
       degree: "B.Tech - Computer Science Engineering",
       institution: "Heritage Institute Of Technology",
       duration: "2023 - 2027",
-      cgpa: "7.92",
+      cgpa: "7.86",
       highlights: [
         "Relevant coursework: Data Structures, Algorithms, Database Systems, Software Engineering",
         "Active participant in hackathons and coding competitions",
@@ -225,15 +238,17 @@ export const portfolioData = {
       issuer: "Industry Certification",
       description: "Certified in React.js, Node.js, REST APIs, and MongoDB for building scalable full-stack applications",
       date: "2026",
-      certificate: ""
+      certificate: "",
+      certificateUrl: "https://trainings.internshala.com/s/v/3943189/861426a7"
     },
     {
       id: 4,
-      name: "Vibe Coding",
+      name: "Artificial Intelligence & Machine Learning",
       issuer: "Industry Certification",
       description: "Certified in AI-assisted development workflows using modern tools to accelerate software delivery",
       date: "2026",
-      certificate: "/certificates/vibe-coding.jpg"
+      certificate: "",
+      certificateUrl: "https://trainings.internshala.com/s/v/3841640/3a676e73"
     }
   ],
 

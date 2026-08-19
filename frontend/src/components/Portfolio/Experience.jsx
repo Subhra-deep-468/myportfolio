@@ -61,10 +61,12 @@ export const Experience = ({ data }) => {
                         <Calendar className="w-4 h-4" />
                         <span>{exp.duration}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
-                        <span>{exp.location}</span>
-                      </div>
+                      {exp.location && (
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4" />
+                          <span>{exp.location}</span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Responsibilities */}

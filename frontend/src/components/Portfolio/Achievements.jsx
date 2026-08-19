@@ -113,7 +113,17 @@ export const Achievements = ({ data }) => {
                         </div>
                         <p className="text-sm text-cyan-500 font-medium mb-2">{cert.issuer}</p>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-3">{cert.description}</p>
-                        {cert.certificate && (
+                        {cert.certificateUrl ? (
+                          <a
+                            href={cert.certificateUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium border border-cyan-500/40 text-cyan-400 hover:bg-cyan-500/10 transition-all duration-200 w-fit"
+                          >
+                            <Eye className="w-3.5 h-3.5" />
+                            View Certificate
+                          </a>
+                        ) : cert.certificate ? (
                           <button
                             onClick={() => setActiveCert(cert)}
                             className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium border border-cyan-500/40 text-cyan-400 hover:bg-cyan-500/10 transition-all duration-200"
@@ -121,7 +131,7 @@ export const Achievements = ({ data }) => {
                             <Eye className="w-3.5 h-3.5" />
                             View Certificate
                           </button>
-                        )}
+                        ) : null}
                       </div>
                     </div>
                   </Card>
@@ -162,7 +172,7 @@ export const Achievements = ({ data }) => {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-6">
                 <div className="text-center p-3 sm:p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
-                  <div className="text-2xl sm:text-4xl font-bold text-cyan-500 mb-1 sm:mb-2">6+</div>
+                  <div className="text-2xl sm:text-4xl font-bold text-cyan-500 mb-1 sm:mb-2">4+</div>
                   <div className="text-xs sm:text-sm font-medium text-muted-foreground">Certifications</div>
                 </div>
                 <div className="text-center p-3 sm:p-6 rounded-xl bg-accent/50 backdrop-blur-sm hover:bg-accent transition-all duration-300 transform hover:scale-105">
