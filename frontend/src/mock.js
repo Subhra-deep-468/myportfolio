@@ -190,7 +190,7 @@ export const portfolioData = {
       degree: "B.Tech - Computer Science Engineering",
       institution: "Heritage Institute Of Technology",
       duration: "2023 - 2027",
-      cgpa: "7.86",
+      cgpa: "7.88",
       highlights: [
         "Relevant coursework: Data Structures, Algorithms, Database Systems, Software Engineering",
         "Active participant in hackathons and coding competitions",

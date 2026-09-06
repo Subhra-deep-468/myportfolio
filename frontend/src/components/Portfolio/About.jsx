@@ -56,7 +56,7 @@ export const About = ({ data }) => {
 
               <Card className="p-6 text-center group hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300 transform hover:scale-105 animate-slide-right" style={{ animationDelay: '0.2s' }}>
                 <div className="text-4xl font-bold bg-gradient-to-r from-amber-400 to-cyan-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
-                  7.86
+                  7.88
                 </div>
                 <div className="text-sm text-muted-foreground">CGPA</div>
               </Card>
