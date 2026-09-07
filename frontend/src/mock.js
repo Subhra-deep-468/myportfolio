@@ -156,7 +156,7 @@ export const portfolioData = {
     {
       id: 1,
       role: "Software Engineer Intern",
-      company: "Euphoria GenX",
+      company: "Techno Exponent (T-Web Exponent Services Pvt. Ltd)",
       duration: "2026 (Internship)",
       type: "Internship",
       responsibilities: [
@@ -276,6 +276,6 @@ export const portfolioData = {
     "Engaged in hackathons and collaborative software development",
     "Coordinated and managed college events (technical & cultural)",
     "Volunteered in college events and academic activities",
-    "Improved application performance by 25% during internship at Euphoria GenX"
+    "Improved application performance by 25% during internship at Techno Exponent (T-Web Exponent Services Pvt. Ltd)"
   ]
 };
