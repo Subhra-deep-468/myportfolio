@@ -86,7 +86,7 @@ export const Hero = ({ data }) => {
             </h1>
 
             {/* Title */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-muted-foreground animate-jump" style={{ animationDelay: '0.3s' }}>
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-muted-foreground animate-jump leading-snug max-w-6xl mx-auto" style={{ animationDelay: '0.3s' }}>
               {data.personalInfo.title}
             </h2>
 

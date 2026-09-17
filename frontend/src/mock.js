@@ -1,7 +1,7 @@
 export const portfolioData = {
   personalInfo: {
     name: "Subhradeep Chakraborty",
-    title: "Aspiring Full Stack Developer & AI Enthusiast",
+    title: "Full-Stack Developer | AI/ML • GenAI • LLMs • RAG | React.js • Express.js • C++ • Python | AWS | Ex-Intern @ Tata Steel Ltd. & Techno Exponent",
     tagline: "Computer Science Engineering undergraduate (Fresher) specializing in Full Stack Development, Software Engineering, and AI Applications. Open to opportunities!",
     email: "subhradeepchakraborty738@gmail.com",
     phone: "7679636849",

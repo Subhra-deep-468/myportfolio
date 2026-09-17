@@ -83,7 +83,7 @@ export const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-muted-foreground hover:text-foreground transition-colors relative group"
+                  className="text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors relative group"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 group-hover:w-full transition-all duration-300" />
