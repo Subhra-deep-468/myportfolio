@@ -8,7 +8,7 @@ export const portfolioData = {
     location: "Kolkata, West Bengal",
     github: "https://github.com/Subhra-deep-468",
     linkedin: "https://linkedin.com/in/subhradeep-chakraborty-7a6a18394",
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "/ltimindtree-resume.pdf",
     avatar: "/profile.jpg"
   },
 
