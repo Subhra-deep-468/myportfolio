@@ -42,7 +42,7 @@ export const About = ({ data }) => {
             <div className="grid grid-cols-2 gap-6">
               <Card className="p-6 text-center group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 transform hover:scale-105 animate-slide-right">
                 <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
-                  5+
+                  6+
                 </div>
                 <div className="text-sm text-muted-foreground">Projects Built</div>
               </Card>

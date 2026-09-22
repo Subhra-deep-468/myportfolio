@@ -135,7 +135,7 @@ export const Projects = ({ data }) => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-3 pt-3 border-t border-border" onClick={(e) => e.stopPropagation()}>
-                      {project.demo ? (
+                      {project.demo && (
                         <a
                           href={project.demo}
                           target="_blank"
@@ -145,11 +145,6 @@ export const Projects = ({ data }) => {
                           <ExternalLink className="w-4 h-4" />
                           Live Demo
                         </a>
-                      ) : (
-                        <span className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-muted-foreground text-sm font-medium cursor-not-allowed opacity-50">
-                          <ExternalLink className="w-4 h-4" />
-                          Live Demo
-                        </span>
                       )}
                       <a
                         href={project.github}

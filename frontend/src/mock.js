@@ -79,6 +79,7 @@ export const portfolioData = {
         { name: "AWS", level: 80 },
         { name: "Docker", level: 75 },
         { name: "Git/GitHub", level: 90 },
+        { name: "Jenkins", level: 75 },
         { name: "CI/CD", level: 75 },
         { name: "Linux", level: 80 }
       ]
@@ -149,6 +150,36 @@ export const portfolioData = {
         "Persistent chat history with message timestamps"
       ],
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=500&fit=crop"
+    },
+    {
+      id: 6,
+      title: "AI Code Editor IDE",
+      description: "Built an AI-powered code editor experience with an integrated assistant for generating, explaining, and improving code directly inside the development workflow.",
+      category: "AI Developer Tool",
+      technologies: ["React.js", "Node.js", "Express.js", "OpenAI API", "JavaScript"],
+      github: "https://github.com/Subhra-deep-468/AI-Code-Editor-IDE",
+      features: [
+        "AI-assisted code generation",
+        "Integrated developer workspace",
+        "Code explanation and optimization",
+        "Built-in terminal workflow"
+      ],
+      image: "https://opengraph.githubassets.com/1/Subhra-deep-468/AI-Code-Editor-IDE"
+    },
+    {
+      id: 7,
+      title: "AI Website Builder",
+      description: "Built an AI-powered website builder that turns natural-language ideas into complete, responsive websites with editable code, live preview, and deployment-ready output.",
+      category: "AI Web Builder",
+      technologies: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "OpenAI API"],
+      github: "https://github.com/Subhra-deep-468/AI_building_website",
+      features: [
+        "Natural-language website generation",
+        "Editable generated code",
+        "Live website preview",
+        "Download and deployment workflow"
+      ],
+      image: "https://opengraph.githubassets.com/1/Subhra-deep-468/AI_building_website"
     }
   ],
 
