@@ -8,7 +8,7 @@ export const portfolioData = {
     location: "Kolkata, West Bengal",
     github: "https://github.com/Subhra-deep-468",
     linkedin: "https://linkedin.com/in/subhradeep-chakraborty-7a6a18394",
-    resumeUrl: "/ltimindtree-resume.pdf",
+    resumeUrl: "/resume.pdf",
     avatar: "/profile.jpg"
   },
 
@@ -17,7 +17,6 @@ export const portfolioData = {
     highlights: [
       "Published NPM package for React components",
       "Built 5+ AI-powered applications during internship & projects",
-      "25% performance improvement achieved during internship",
       "Active learner & open-source contributor"
     ]
   },
@@ -28,10 +27,7 @@ export const portfolioData = {
       items: [
         { name: "JavaScript", level: 90 },
         { name: "Python", level: 85 },
-        { name: "TypeScript", level: 80 },
-        { name: "Java", level: 75 },
-        { name: "C++", level: 75 },
-        { name: "C", level: 70 }
+        { name: "C++", level: 75 }
       ]
     },
     {
@@ -39,8 +35,7 @@ export const portfolioData = {
       items: [
         { name: "React.js", level: 95 },
         { name: "Tailwind CSS", level: 90 },
-        { name: "HTML5/CSS3", level: 90 },
-        { name: "Responsive Design", level: 85 }
+        { name: "HTML5/CSS3", level: 90 }
       ]
     },
     {
@@ -48,29 +43,23 @@ export const portfolioData = {
       items: [
         { name: "Node.js", level: 90 },
         { name: "Express.js", level: 90 },
-        { name: "Next.js", level: 80 },
-        { name: "REST APIs", level: 90 },
-        { name: "Authentication", level: 85 }
+        { name: "REST APIs", level: 90 }
       ]
     },
     {
       category: "Databases",
       items: [
         { name: "MongoDB", level: 85 },
-        { name: "MySQL", level: 80 },
-        { name: "Database Design", level: 85 },
-        { name: "Database Optimization", level: 75 }
+        { name: "MySQL", level: 80 }
       ]
     },
     {
       category: "AI & Generative AI",
       items: [
-        { name: "LangChain", level: 85 },
         { name: "OpenAI API", level: 90 },
         { name: "Gemini API", level: 85 },
         { name: "Prompt Engineering", level: 90 },
-        { name: "LLMs", level: 85 },
-        { name: "Vector Databases", level: 75 }
+        { name: "LLMs", level: 85 }
       ]
     },
     {
@@ -79,8 +68,6 @@ export const portfolioData = {
         { name: "AWS", level: 80 },
         { name: "Docker", level: 75 },
         { name: "Git/GitHub", level: 90 },
-        { name: "Jenkins", level: 75 },
-        { name: "CI/CD", level: 75 },
         { name: "Linux", level: 80 }
       ]
     }
@@ -104,22 +91,6 @@ export const portfolioData = {
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop"
     },
     {
-      id: 2,
-      title: "AI Voice Assistant for Websites",
-      description: "Built and deployed an AI-powered voice assistant platform with Speech-to-Text, Text-to-Speech, and Gemini API integration for context-aware conversations. Developed scalable full-stack architecture with responsive UI.",
-      category: "AI Application",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "STT", "TTS", "Gemini API"],
-      github: "https://github.com/Subhra-deep-468/AIvoice-assistant",
-      demo: "https://aivoice-assistant-1.onrender.com/login",
-      features: [
-        "Real-time voice interaction",
-        "Context-aware AI responses",
-        "Multi-language support",
-        "Cloud deployment"
-      ],
-      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=500&fit=crop"
-    },
-    {
       id: 4,
       title: "Ai Interview Agent",
       description: "Built a collaborative AI based Interview preparation  tool with real-time updates, team collaboration features, and advanced filtering capabilities for productivity teams.",
@@ -136,37 +107,6 @@ export const portfolioData = {
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop"
     },
     {
-      id: 5,
-      title: "Real Time Chat Application",
-      description: "Built a full-stack real-time chat platform using Socket.IO for WebSocket-based low-latency messaging. Features secure authentication, online/offline presence indicators, typing status, message timestamps, and persistent chat history.",
-      category: "Full Stack",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
-      github: "https://github.com/Subhra-deep-468/realtime_chatapplication1",
-      demo: "https://realtime-chatapplication1frontend.onrender.com/login",
-      features: [
-        "Instant messaging via WebSocket (Socket.IO)",
-        "Secure user authentication & authorization",
-        "Online/offline presence & typing indicators",
-        "Persistent chat history with message timestamps"
-      ],
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=500&fit=crop"
-    },
-    {
-      id: 6,
-      title: "AI Code Editor IDE",
-      description: "Built an AI-powered code editor experience with an integrated assistant for generating, explaining, and improving code directly inside the development workflow.",
-      category: "AI Developer Tool",
-      technologies: ["React.js", "Node.js", "Express.js", "OpenAI API", "JavaScript"],
-      github: "https://github.com/Subhra-deep-468/AI-Code-Editor-IDE",
-      features: [
-        "AI-assisted code generation",
-        "Integrated developer workspace",
-        "Code explanation and optimization",
-        "Built-in terminal workflow"
-      ],
-      image: "https://opengraph.githubassets.com/1/Subhra-deep-468/AI-Code-Editor-IDE"
-    },
-    {
       id: 7,
       title: "AI Website Builder",
       description: "Built an AI-powered website builder that turns natural-language ideas into complete, responsive websites with editable code, live preview, and deployment-ready output.",
@@ -180,6 +120,22 @@ export const portfolioData = {
         "Download and deployment workflow"
       ],
       image: "https://opengraph.githubassets.com/1/Subhra-deep-468/AI_building_website"
+    },
+    {
+      id: 2,
+      title: "AI Voice Assistant for Websites",
+      description: "Built and deployed an AI-powered voice assistant platform with Speech-to-Text, Text-to-Speech, and Gemini API integration for context-aware conversations. Developed scalable full-stack architecture with responsive UI.",
+      category: "AI Application",
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "STT", "TTS", "Gemini API"],
+      github: "https://github.com/Subhra-deep-468/AIvoice-assistant",
+      demo: "https://aivoice-assistant-1.onrender.com/login",
+      features: [
+        "Real-time voice interaction",
+        "Context-aware AI responses",
+        "Multi-language support",
+        "Cloud deployment"
+      ],
+      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=500&fit=crop"
     }
   ],
 
@@ -187,15 +143,14 @@ export const portfolioData = {
     {
       id: 1,
       role: "Software Engineer Intern",
-      company: "Techno Exponent (T-Web Exponent Services Pvt. Ltd)",
+      company: "Techno Exponent",
       duration: "2026 (Internship)",
       type: "Internship",
       responsibilities: [
-        "Developed and optimized 5+ full-stack features using React.js, Node.js, and REST APIs",
-        "Improved application performance and scalability by 25%",
-        "Collaborated with cross-functional teams in Agile environment",
-        "Contributed to backend development, database management, and code reviews",
-        "Implemented debugging solutions and participated in Agile-based software delivery"
+        "Built a doctor appointment booking platform using React.js, Node.js, Express.js, and MongoDB, with patient, doctor, and admin dashboards.",
+        "Developed secure REST APIs with JWT authentication and role-based access for patients, doctors, and admins.",
+        "Developed and optimized 5+ full-stack features using React.js, Node.js, Express.js, and REST APIs improving application functionality and performance.",
+        "Integrated AI features to assist patients in finding the right doctor and booking faster."
       ],
       technologies: ["React.js", "Node.js", "REST APIs", "MongoDB", "Agile", "AI", "Machine Learning","Rest Apis"]
     },
@@ -207,9 +162,10 @@ export const portfolioData = {
       location: "India",
       type: "Internship",
       responsibilities: [
-        "Applied programming and debugging concepts to improve the functionality and reliability of web applications",
-        "Gained experience working in a professional organizational environment and understanding software development practices",
-        "Strengthened problem-solving and technical skills through practical development work"
+        "Built SelloraAI, a digital products marketplace using React, Node.js, Express.js, MongoDB, and Razorpay, implementing order processing and server-side payment signature verification to reject invalid payments.",
+        "Developed product management features for creating, editing, deleting, and publicly listing products, with unique slug-based URLs and ownership checks.",
+        "Developed AI-powered sales insights to summarize creators’ order data and generate charts.",
+        "Implemented Google login with server-side token verification and cookie-based sessions to protect creator and admin pages."
       ],
       technologies: ["Professional Experience"]
     }
@@ -297,8 +253,8 @@ export const portfolioData = {
   ],
 
   languages: [
-    { name: "English", level: "Professional", proficiency: 90 },
-    { name: "Hindi", level: "Native", proficiency: 100 }
+    { name: "English", level: "Professional", proficiency: 100 },
+    { name: "Hindi", level: "Native", proficiency: 90 }
   ],
 
   achievements: [
@@ -306,7 +262,6 @@ export const portfolioData = {
     "Enhanced 4+ AI-powered and full-stack applications using Generative AI and cloud tech",
     "Engaged in hackathons and collaborative software development",
     "Coordinated and managed college events (technical & cultural)",
-    "Volunteered in college events and academic activities",
-    "Improved application performance by 25% during internship at Techno Exponent (T-Web Exponent Services Pvt. Ltd)"
+    "Volunteered in college events and academic activities"
   ]
 };
