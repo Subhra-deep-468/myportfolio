@@ -16,8 +16,7 @@ export const portfolioData = {
     description: "Passionate Computer Science undergraduate (Fresher) with hands-on internship experience and a strong drive to build scalable full-stack applications and AI-powered solutions. I love solving complex problems and creating innovative digital experiences. Actively seeking entry-level opportunities to contribute and grow.",
     highlights: [
       "Published NPM package for React components",
-      "Built 5+ AI-powered applications during internship & projects",
-      "Active learner & open-source contributor"
+      "Built 5+ AI-powered applications during internship & projects"
     ]
   },
 
