@@ -121,21 +121,14 @@ export const portfolioData = {
       image: "https://opengraph.githubassets.com/1/Subhra-deep-468/AI_building_website"
     },
     {
-      id: 2,
-      title: "AI Voice Assistant for Websites",
-      description: "Built and deployed an AI-powered voice assistant platform with Speech-to-Text, Text-to-Speech, and Gemini API integration for context-aware conversations. Developed scalable full-stack architecture with responsive UI.",
-      category: "AI Application",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "STT", "TTS", "Gemini API"],
-      github: "https://github.com/Subhra-deep-468/AIvoice-assistant",
-      demo: "https://aivoice-assistant-1.onrender.com/login",
-      features: [
-        "Real-time voice interaction",
-        "Context-aware AI responses",
-        "Multi-language support",
-        "Cloud deployment"
-      ],
-      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=500&fit=crop"
-    }
+      id: 8,
+      title: "AI DIGITAL PRODUCT SELLING WEBSITE",
+      description: "A digital products marketplace built with a React frontend and an Express and MongoDB backend.",
+      category: "Digital Marketplace",
+      technologies: ["React", "TypeScript", "Express.js", "MongoDB", "Redis", "Firebase"],
+      github: "https://github.com/Subhra-deep-468/Digital-Product-Selling-Website",
+      image: "https://opengraph.githubassets.com/1/Subhra-deep-468/Digital-Product-Selling-Website"
+    },
   ],
 
   experience: [

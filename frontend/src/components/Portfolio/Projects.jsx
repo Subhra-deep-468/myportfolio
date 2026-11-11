@@ -102,7 +102,7 @@ export const Projects = ({ data }) => {
                   <div className="p-6 flex flex-col flex-1 gap-3">
                     {/* Title + Category */}
                     <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-xl font-bold group-hover:text-cyan-400 transition-colors leading-snug">
+                      <h3 className={`${project.title === 'AI DIGITAL PRODUCT SELLING WEBSITE' ? 'text-lg' : 'text-xl'} font-bold group-hover:text-cyan-400 transition-colors leading-snug`}>
                         {project.title}
                       </h3>
                       {project.category && (
