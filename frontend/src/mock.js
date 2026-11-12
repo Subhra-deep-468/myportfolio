@@ -24,7 +24,7 @@ export const portfolioData = {
     {
       category: "Programming Languages",
       items: [
-        { name: "C++", level: 75 },
+        { name: "C++", level: 90 },
         { name: "Python", level: 85 },
         { name: "JavaScript", level: 90 }
       ]
