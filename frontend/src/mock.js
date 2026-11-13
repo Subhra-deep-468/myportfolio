@@ -58,7 +58,8 @@ export const portfolioData = {
         { name: "OpenAI API", level: 90 },
         { name: "Gemini API", level: 85 },
         { name: "Prompt Engineering", level: 90 },
-        { name: "LLMs", level: 85 }
+        { name: "LLMs", level: 85 },
+        { name: "RAG", level: 85 }
       ]
     },
     {
